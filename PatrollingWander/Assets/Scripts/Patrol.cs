@@ -10,6 +10,7 @@ public class Patrol : MonoBehaviour
     public GameObject[] waypoints;
 
     int patrolWP = 0;
+    public float range;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class Patrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!agent.pathPending && agent.remainingDistance < 0.5f) Patrolling();
+        if (!agent.pathPending && agent.remainingDistance < range) Patrolling();
     }
 
     void Patrolling()
