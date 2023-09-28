@@ -6,7 +6,6 @@ using UnityEngine.AI;
 public class Patrol : MonoBehaviour
 {
     public NavMeshAgent agent;
-    public Transform target;
     public GameObject[] waypoints;
 
     int patrolWP = 0;
@@ -16,7 +15,7 @@ public class Patrol : MonoBehaviour
     void Start()
     {
         //Random position
-
+        agent.transform.position = waypoints[Random.Range(0, waypoints.Length)].transform.position;
     }
 
     // Update is called once per frame

@@ -18,10 +18,4 @@ public class GhostFollow : MonoBehaviour
         agent.destination = target.position;
     }
 
-    //RANDOM POSITION: Must appear in a random waypoint
-    //Vector3 RandomPosition()
-    //{
-    //    Vector3 pos = UnityEngine.Random.RandomRange
-    //    return pos;
-    //}
 }
