@@ -29,16 +29,17 @@ public class Patrol : MonoBehaviour
         // Choose the next point in the array as the destination,
         // cycling to the start if necessary.
         patrolWP = (patrolWP + 1) % waypoints.Length;
-        Seek(waypoints[patrolWP].transform.position);
+        Seek();
     }
 
-    void Seek(Vector3 pos)
+    void Seek()
     {
         if (waypoints.Length == 0)
             return;
 
         // Set the agent to go to the currently selected destination.
         agent.destination = waypoints[patrolWP].transform.position;
+        //agent.SetDestination(waypoints[patrolWP].transform.position;
     }
 
 }
